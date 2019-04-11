@@ -1,0 +1,316 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sinmn</groupId>
+  <artifactId>sinmn-parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.7.RELEASE</version>
+  </parent>
+  
+  <properties>
+        <logback.ext.version>0.1.1</logback.ext.version>
+        <logback.encoder.version>4.8</logback.encoder.version>
+        <swagger.version>2.9.2</swagger.version>
+        <swagger.bootstrap.ui.version>1.9.1</swagger.bootstrap.ui.version>
+        <druid.version>1.1.10</druid.version>
+        <mybatis.version>3.3.1</mybatis.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <aliyun.java.sdk.core.version>3.7.1</aliyun.java.sdk.core.version>
+        <aliyun.java.sdk.dysmsapi.version>1.1.0</aliyun.java.sdk.dysmsapi.version>
+        <commons.httpclient.version>3.1</commons.httpclient.version>
+        <commons.fileupload.version>1.3.1</commons.fileupload.version>
+        <commons.io.version>2.0.1</commons.io.version>
+        <fastjson.version>1.2.31</fastjson.version>
+        <mail.version>1.4.3</mail.version>
+        <servlet.api.version>2.5</servlet.api.version>
+        <aspectj.version>1.8.9</aspectj.version>
+        <poi.version>3.17</poi.version>
+        <jetty.version>6.1.5</jetty.version>
+        <sinmn.version>1.0.0-SNAPSHOT</sinmn.version>
+    </properties>
+    
+    <dependencyManagement>
+		<dependencies>	     
+			<!-- apectj start -->
+			<dependency>
+			      <groupId>org.aspectj</groupId>
+			      <artifactId>aspectjweaver</artifactId>
+			      <version>${aspectj.version}</version>
+	    	</dependency>
+		    <dependency>
+			      <groupId>org.aspectj</groupId>
+			      <artifactId>aspectjrt</artifactId>
+			      <version>${aspectj.version}</version>
+		    </dependency>   
+		    <!-- apectj end -->
+	        <!-- swagger2 start -->
+	        <dependency>
+	            <groupId>io.springfox</groupId>
+	            <artifactId>springfox-swagger2</artifactId>
+	            <version>${swagger.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>io.springfox</groupId>
+	            <artifactId>springfox-swagger-ui</artifactId>
+	            <version>${swagger.version}</version>
+	        </dependency>
+	        <dependency>
+				<groupId>com.github.xiaoymin</groupId>
+				<artifactId>swagger-bootstrap-ui</artifactId>
+				<version>${swagger.bootstrap.ui.version}</version>
+			</dependency>
+	        <!-- swagger2 end -->
+	        
+	         <!-- druid start -->
+	        <dependency>
+		        <groupId>com.alibaba</groupId>
+		        <artifactId>druid</artifactId>
+		        <version>${druid.version}</version>
+		    </dependency>
+	      	<dependency>
+	            <groupId>com.alibaba</groupId>
+	            <artifactId>druid-spring-boot-starter</artifactId>
+	            <version>${druid.version}</version>
+	      	</dependency>
+	        <!-- druid end -->
+	        
+	        <!-- logback start-->
+	        <dependency>
+	            <groupId>net.logstash.logback</groupId>
+	            <artifactId>logstash-logback-encoder</artifactId>
+	            <version>${logback.encoder.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>org.logback-extensions</groupId>
+	            <artifactId>logback-ext-spring</artifactId>
+	            <version>${logback.ext.version}</version>
+	        </dependency>
+			<!-- logback end -->
+			
+			 <!-- mybatis begin -->
+	        <dependency>
+	                <groupId>org.mybatis</groupId>
+	                <artifactId>mybatis</artifactId>
+	                <version>${mybatis.version}</version>
+	        </dependency>
+	        <dependency>
+	                <groupId>org.mybatis</groupId>
+	                <artifactId>mybatis-spring</artifactId>
+	                <version>${mybatis-spring.version}</version>
+	        </dependency>
+	        <!-- mybatis end -->
+	        
+	        <!-- 阿里云短信 begin -->
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-core</artifactId>
+				<version>${aliyun.java.sdk.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.aliyun</groupId>
+				<artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+				<version>${aliyun.java.sdk.dysmsapi.version}</version>
+			</dependency>
+			<!-- 阿里云短信  end-->
+			
+			<!-- commons begin-->
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>${commons.httpclient.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons.fileupload.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons.io.version}</version>
+			</dependency>
+			<!-- commons end-->
+			
+			<!-- fastjson begin-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+			<!-- fastjson end-->
+			
+			<!-- mail begin-->
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>${mail.version}</version>
+			</dependency>
+			<!-- mail end-->
+			
+			<dependency>
+	            <groupId>javax.servlet</groupId>
+	            <artifactId>servlet-api</artifactId>
+	            <version>${servlet.api.version}</version>
+	        </dependency>
+	        
+	        <!-- poi start -->
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml-schemas</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>org.apache.poi</groupId>
+			    <artifactId>poi-scratchpad</artifactId>
+			    <version>${poi.version}</version>
+			</dependency>
+			<!-- poi end -->
+	        
+	        <!-- sinmn-core start-->
+	        <dependency>
+			    <groupId>com.sinmn.core</groupId>
+			    <artifactId>sinmn-core-util</artifactId>
+			    <version>${sinmn.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sinmn.core</groupId>
+			    <artifactId>sinmn-core-model</artifactId>
+			    <version>${sinmn.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sinmn.core</groupId>
+			    <artifactId>sinmn-core-ie</artifactId>
+			    <version>${sinmn.version}</version>
+			</dependency>
+	        <!-- sinmn-core end -->
+	        
+	        <!-- iweb start -->
+	        <dependency>
+				<groupId>com.sinmn.iweb</groupId>
+				<artifactId>sinmn-iweb-auth</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.sinmn.iweb</groupId>
+				<artifactId>sinmn-iweb-file</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+			<!-- iweb end -->
+			
+			<!-- mjar start -->
+			<dependency>
+				<groupId>com.sinmn.mjar</groupId>
+				<artifactId>sinmn-mjar-log</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sinmn.mjar</groupId>
+				<artifactId>sinmn-mjar-crm</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sinmn.mjar</groupId>
+				<artifactId>sinmn-mjar-ext</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+			<!-- mjar end -->
+			
+			<!-- tool start -->
+			<dependency>
+				<groupId>com.sinmn.tool</groupId>
+				<artifactId>sinmn-tool-autocode</artifactId>
+				<version>${sinmn.version}</version>
+			</dependency>
+        	<!-- tool start -->
+        	        	
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.mortbay.jetty</groupId>
+					<artifactId>maven-jetty-plugin</artifactId>
+					<version>${jetty.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	
+	
+
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus</name>
+			<url>http://mvn.sinmn.cn:8888/nexus/content/groups/public</url>
+			  <releases>
+				<enabled>true</enabled>
+			  </releases>
+			  <snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			  </snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Nexus</name>
+			<url>http://mvn.sinmn.cn:8888/nexus/content/groups/public</url>
+			  <releases>
+				<enabled>true</enabled>
+			  </releases>
+			  <snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			  </snapshots>
+		</pluginRepository>
+	</pluginRepositories> 
+
+	<distributionManagement>
+		<repository>    
+	      	<id>releases</id>    
+	      	<name>Nexus Release Repository</name>    
+	      	<url>http://mvn.sinmn.cn:8888/nexus/content/repositories/releases/</url>    
+    	</repository>    
+    	<snapshotRepository>    
+	      	<id>snapshots</id>    
+	      	<name>Nexus Snapshot Repository</name>    
+	      	<url>http://mvn.sinmn.cn:8888/nexus/content/repositories/snapshots/</url>    
+    	</snapshotRepository>    
+  	</distributionManagement>
+</project>
